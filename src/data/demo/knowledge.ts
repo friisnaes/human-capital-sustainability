@@ -1,0 +1,165 @@
+/**
+ * FIKTIVE DEMONSTRATIONSDATA – kritiske vidensområder.
+ * Dokumentationsniveau: 0 = ingen, 1 = delvis, 2 = dækkende, 3 = dækkende og vedligeholdt.
+ */
+import type { KnowledgeArea } from '../../domain/types';
+
+export const knowledge: KnowledgeArea[] = [
+  {
+    id: 'K01',
+    unitId: 'DIG',
+    name: 'Kalibrering af prediktive nedbrudsmodeller',
+    description: 'Feature-valg, kalibrering og validering af de modeller, serviceaftalernes prisløfter bygger på.',
+    capabilityIds: ['C01'],
+    criticality: 5,
+    baseRebuildMonths: 14,
+    documentation: [
+      { date: '2025-01-15', value: 0 },
+      { date: '2026-05-15', value: 1 },
+    ],
+    holders: [
+      { personId: 'P15', level: 'ekspert', from: '2021-05-01', to: null },
+      { personId: 'P27', level: 'under oplæring', from: '2025-10-01', to: null },
+    ],
+  },
+  {
+    id: 'K02',
+    unitId: 'DIG',
+    name: 'Cloud- og integrationsarkitektur',
+    description: 'Serviceplatformens arkitektur, datastrømme fra sensorer og integration til kundernes systemer.',
+    capabilityIds: ['C02'],
+    criticality: 5,
+    baseRebuildMonths: 10,
+    documentation: [
+      { date: '2025-01-15', value: 1 },
+      { date: '2026-08-15', value: 2 },
+    ],
+    holders: [
+      { personId: 'P31', level: 'ekspert', from: '2019-02-01', to: '2026-01-31' },
+      { personId: 'P32', level: 'praktiker', from: '2023-09-01', to: null },
+      { personId: 'P16', level: 'praktiker', from: '2026-06-01', to: null },
+    ],
+  },
+  {
+    id: 'K03',
+    unitId: 'TEK',
+    name: 'Hydrauliske designregler og simuleringsværktøj',
+    description: 'Egenudviklet beregningsværktøj og empiriske designregler, som Nova-platformen konstrueres efter.',
+    capabilityIds: ['C04'],
+    criticality: 5,
+    baseRebuildMonths: 18,
+    documentation: [{ date: '2025-01-15', value: 1 }],
+    holders: [
+      { personId: 'P20', level: 'ekspert', from: '2004-03-01', to: null },
+      { personId: 'P33', level: 'under oplæring', from: '2026-03-01', to: null },
+    ],
+  },
+  {
+    id: 'K04',
+    unitId: 'TEK',
+    name: 'ATEX- og certificeringsdossierer',
+    description: 'Dossierer, testprotokoller og myndighedsdialog for eksplosionssikre produkter.',
+    capabilityIds: ['C05'],
+    criticality: 4,
+    baseRebuildMonths: 9,
+    documentation: [
+      { date: '2025-01-15', value: 1 },
+      { date: '2026-06-20', value: 2 },
+    ],
+    holders: [
+      { personId: 'P21', level: 'ekspert', from: '2015-10-01', to: null },
+      { personId: 'P36', level: 'under oplæring', from: '2025-06-01', to: '2026-01-31' },
+      { personId: 'P36', level: 'praktiker', from: '2026-02-01', to: null },
+    ],
+  },
+  {
+    id: 'K05',
+    unitId: 'KOM',
+    name: 'Key account-relationer i DACH',
+    description: 'Beslutningsstrukturer, historik og aftaler hos de ti største kunder i DACH.',
+    capabilityIds: ['C08'],
+    criticality: 4,
+    baseRebuildMonths: 12,
+    documentation: [{ date: '2024-01-01', value: 1 }],
+    holders: [
+      { personId: 'P12', level: 'ekspert', from: '2020-01-01', to: null },
+      { personId: 'P34', level: 'praktiker', from: '2021-06-01', to: null },
+    ],
+  },
+  {
+    id: 'K06',
+    unitId: 'KON',
+    name: 'Prismodeller for serviceaftaler',
+    description: 'Beregningsmodeller for risikodeling, oppetidsgarantier og lønsomhed i serviceaftaler.',
+    capabilityIds: ['C09'],
+    criticality: 4,
+    baseRebuildMonths: 8,
+    documentation: [{ date: '2025-01-15', value: 1 }],
+    holders: [{ personId: 'P25', level: 'ekspert', from: '2022-05-01', to: null }],
+  },
+  {
+    id: 'K07',
+    unitId: 'PRD',
+    name: 'Leverandøraftaler for kritiske komponenter',
+    description: 'Aftalevilkår, alternative leverandører og beredskabsplaner for motorer og elektronik.',
+    capabilityIds: ['C07'],
+    criticality: 4,
+    baseRebuildMonths: 6,
+    documentation: [
+      { date: '2025-01-15', value: 2 },
+      { date: '2026-03-10', value: 3 },
+    ],
+    holders: [
+      { personId: 'P09', level: 'ekspert', from: '2014-09-01', to: null },
+      { personId: 'P30', level: 'praktiker', from: '2020-01-01', to: null },
+      { personId: 'P39', level: 'praktiker', from: '2022-01-01', to: null },
+    ],
+  },
+  {
+    id: 'K08',
+    unitId: 'PRD',
+    name: 'Lean-standarder og produktionssystem',
+    description: 'Standardiseret arbejde, tavlestruktur og forbedringsmetoder i fabrikken.',
+    capabilityIds: ['C06'],
+    criticality: 3,
+    baseRebuildMonths: 6,
+    documentation: [{ date: '2025-01-15', value: 3 }],
+    holders: [
+      { personId: 'P08', level: 'ekspert', from: '2018-01-15', to: null },
+      { personId: 'P29', level: 'praktiker', from: '2019-01-01', to: null },
+      { personId: 'P07', level: 'praktiker', from: '2016-04-01', to: null },
+    ],
+  },
+  {
+    id: 'K09',
+    unitId: 'TEK',
+    name: 'Embedded firmware til pumpestyring',
+    description: 'Styringssoftware og sensorintegration i pumperne.',
+    capabilityIds: ['C04', 'C02'],
+    criticality: 4,
+    baseRebuildMonths: 10,
+    documentation: [{ date: '2025-01-15', value: 2 }],
+    holders: [
+      { personId: 'P22', level: 'ekspert', from: '2020-08-01', to: null },
+      { personId: 'P40', level: 'praktiker', from: '2018-01-01', to: null },
+    ],
+  },
+  {
+    id: 'K10',
+    unitId: 'DIG',
+    name: 'Serviceprocesser og abonnementsdrift',
+    description: 'Processer for onboarding af kunder, eskalering og fornyelse af serviceaftaler.',
+    capabilityIds: ['C03'],
+    criticality: 3,
+    baseRebuildMonths: 5,
+    documentation: [
+      { date: '2025-01-15', value: 1 },
+      { date: '2026-02-01', value: 2 },
+    ],
+    holders: [
+      { personId: 'P42', level: 'ekspert', from: '2018-05-01', to: '2025-10-31' },
+      { personId: 'P17', level: 'ekspert', from: '2023-01-01', to: null },
+      { personId: 'P18', level: 'praktiker', from: '2025-06-01', to: null },
+    ],
+  },
+];
